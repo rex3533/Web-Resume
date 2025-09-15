@@ -1,0 +1,172 @@
+/* Dark mode base done via Chatgpt */
+* { box-sizing: border-box; }
+:root {
+  --bg: #0f0f10;
+  --panel: #1b1b1e;
+  --panel-2: #232327;
+  --text: #e9e9e9;
+  --muted: #b9b9b9;
+  --link: #7dc3ff;
+  --accent: #4aa3ff;
+  --shadow: 0 2px 8px rgba(0,0,0,0.35);
+  --radius: 12px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Layout */
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+}
+
+/* Nav */
+.nav a {
+  color: var(--link);
+  text-decoration: none;
+  margin-left: 16px;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+.nav a:hover,
+.nav a:focus {
+  background: #2a2a2f;
+  outline: none;
+}
+
+/* Cards */
+.card {
+  background: var(--panel-2);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  margin: 18px 0;
+}
+.main-info {
+  background: var(--panel);
+}
+
+/* Headings */
+h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.25rem;
+}
+h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.05rem;
+}
+
+/* Links */
+a { color: var(--link); }
+
+/* Grid of tiles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+.tile {
+  background: #1e1e22;
+  border: 1px solid #2b2b31;
+  border-radius: var(--radius);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tile p {
+  color: var(--muted);
+  margin: 6px 0 12px 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--accent);
+  color: #081018;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-align: center;
+}
+.btn:hover,
+.btn:focus {
+  filter: brightness(1.05);
+  outline: none;
+}
+
+/* Lists */
+.bullets {
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid #27272d;
+  margin-top: 28px;
+  color: var(--muted);
+}
+.site-footer .container {
+  padding: 18px 0 28px 0;
+}
+.site-footer a { color: var(--link); }
+
+/* Responsive tweaks */
+@media (max-width: 520px) {
+  .nav a { margin-left: 10px; }
+}
+
+/* --- Print Styles for PDF (Requirement 3/4) --- */
+@media print {
+  /* White background and dark text for clean printing */
+  html, body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .site-header,
+  .nav,
+  .site-footer,
+  .actions,
+  .grid .tile .btn {
+    display: none !important; /* remove nav/buttons from print */
+  }
+  .card, .main-info {
+    box-shadow: none !important;
+    background: #fff !important;
+    border: none !important;
+    margin: 0 0 12px 0;
+    padding: 0;
+  }
+  a { color: #000 !important; text-decoration: none; }
+  h1, h2, h3 { color: #000 !important; }
+  /* Avoid page numbering artifacts from browsers */
+  @page {
+    margin: 0.5in;
+    /* Most browsers inject page numbers via headers/footers; user can toggle in print dialog. */
+  }
+}

@@ -1,12 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Hello World Azure Template</title>
+  <meta charset="utf-8" />
+  <title>Glaycon Cezarotto — Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Link the external CSS -->
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-<h1>Azure Static Website Template</h1>
-<p>This page is a sample page for a “Hello World” Azure Static Website Template. The page contains an HTML validation warning. 
-Can you find and fix that warning? What about the curly quotes? Do they current work in all browsers? Can you fix the curly 
-quotes also? And what about proper indenting?</p>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="identity">
+        <h1>Glaycon Cezarotto</h1>
+        <p id="contact">
+          Contact Info •
+          <a href="mailto:Maskie53glaycon@gmail.com">Maskie53glaycon@gmail.com</a> •
+          <a href="mailto:GlayconCezarotto@lewisu.edu">GlayconCezarotto@lewisu.edu</a> •
+          708-890-3605
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Summary -->
+    <section id="resume" class="card main-info" aria-labelledby="resume-title">
+      <h2 id="resume-title">Professional Summary</h2>
+      <p>
+        Motivated and detail-oriented Technical Assistant with 8+ years supporting IT,
+        documentation, and inventory operations. Senior B.S. Computer Science student,
+        Cybersecurity minor (Lewis University). Hands-on with Python, C++, C#, Java, HTML, SQL,
+        Git/GitHub Pages, Azure Static Web Apps, Wireshark, Metasploit, and MonoGame
+        videogame programming.
+      </p>
+      <div class="actions">
+        <a class="btn" href="Resume.pdf" target="_blank" rel="noopener" title="Opens printable PDF resume">Open PDF Resume</a>
+        <a class="btn" href="https://happy-pond-006a19410.2.azurestaticapps.net" target="_blank" rel="noopener">Assignment Hub</a>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="card" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <div class="grid">
+        <article class="tile">
+          <h3>Programming & Web</h3>
+          <ul class="bullets">
+            <li>Python, C++, C#, Java, HTML, SQL</li>
+            <li>Git &amp; GitHub Pages</li>
+            <li>Azure Static Web Apps</li>
+          </ul>
+        </article>
+        <article class="tile">
+          <h3>Cyber & Systems</h3>
+          <ul class="bullets">
+            <li>Wireshark, Metasploit, Kali</li>
+            <li>Windows, Linux CLI</li>
+            <li>Object-Oriented Programming</li>
+          </ul>
+        </article>
+        <article class="tile">
+          <h3>Concepts & Tools</h3>
+          <ul class="bullets">
+            <li>Agile Practices, Debugging</li>
+            <li>Database Design &amp; SQL</li>
+            <li>Videogame Programming (MonoGame, C#)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="card" aria-labelledby="exp-title">
+      <h2 id="exp-title">Experience</h2>
+      <h3>Technical Assistant / Administrative Support — Avanti, Lemont, IL (2018–Present)</h3>
+      <ul class="bullets">
+        <li>Troubleshot devices, software updates, and connectivity issues.</li>
+        <li>Performed inventory checks and ensured availability of job materials.</li>
+        <li>Improved internal documentation using Excel and Google Sheets.</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section class="card" aria-labelledby="projects-title">
+      <h2 id="projects-title">Selected Projects</h2>
+      <ul class="bullets">
+        <li><strong>Wireshark Network Analysis (2025):</strong> Captured traffic, filtered HTTP packets, identified risks in a simulated intrusion.</li>
+        <li><strong>Metasploit Pen Testing (2025):</strong> Simulated attacks, obtained shell access to vulnerable systems, practiced Meterpreter post-exploitation.</li>
+        <li><strong>SQL Database Design:</strong> Normalization, schema design, and complex joins.</li>
+        <li><strong>C++ Banking System:</strong> OOP-based transactions and account handling.</li>
+        <li><strong>Videogame Programming:</strong> MonoGame character/NPC sprites, content pipeline, and debugging.</li>
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section class="card" aria-labelledby="edu-title">
+      <h2 id="edu-title">Education</h2>
+      <p><strong>Lewis University</strong> — B.S. Computer Science, Minor in Cybersecurity (Expected 2026)</p>
+      <p>Relevant Coursework: Data Structures, Algorithms, Database Management, Computer Organization, Ethical Hacking, Database Systems</p>
+      <p><strong>Lockport Township High School</strong> — High School Diploma, Perfect Attendance (2022)</p>
+    </section>
+  </main>
 </body>
 </html>
